@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Server you want to monitor
-const targetServer = 'https://brochat-2cqd.onrender.com/health';
+const targetServer = 'https://brochat-brokebro.onrender.com/health';
 
 // Function to check health of BroChat
 const checkHealth = async () => {
@@ -16,8 +16,8 @@ const checkHealth = async () => {
   }
 };
 
-// Start continuous health check every 3 seconds
-setInterval(checkHealth, 300000);
+// Start continuous health check every 10 minutes
+setInterval(checkHealth, 600000);
 
 // Health route for this monitoring server
 app.get('/health', (req, res) => {
