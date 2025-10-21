@@ -6,6 +6,8 @@ const port = process.env.PORT || 3000;
 // Server you want to monitor
 const targetServer = 'https://brochat-2cqd.onrender.com/health';
 const targetServer2 = 'https://crop-service-wkxt.onrender.com/health';
+const targetServer3 = 'https://e-tongue-call-bot.onrender.com/health';
+const targetServer4 = 'https://dss-call-bot.onrender.com/health';
 
 // Function to check health of BroChat
 const checkHealth = async () => {
@@ -14,9 +16,15 @@ const checkHealth = async () => {
     console.log(`[✅ Healthy] ${targetServer} at ${new Date().toLocaleTimeString()}`);
     await axios.get(targetServer2);
     console.log(`[✅ Healthy] ${targetServer2} at ${new Date().toLocaleTimeString()}`);
+    await axios.get(targetServer3);
+    console.log(`[✅ Healthy] ${targetServer3} at ${new Date().toLocaleTimeString()}`);
+    await axios.get(targetServer4);
+    console.log(`[✅ Healthy] ${targetServer4} at ${new Date().toLocaleTimeString()}`);
   } catch (error) {
     console.error(`[❌ Down] ${targetServer} at ${new Date().toLocaleTimeString()} - ${error.message}`);
     console.error(`[❌ Down] ${targetServer2} at ${new Date().toLocaleTimeString()} - ${error.message}`);
+    console.error(`[❌ Down] ${targetServer3} at ${new Date().toLocaleTimeString()} - ${error.message}`);
+    console.error(`[❌ Down] ${targetServer4} at ${new Date().toLocaleTimeString()} - ${error.message}`);
   }
 };
 
