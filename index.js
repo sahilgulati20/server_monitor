@@ -6,8 +6,8 @@ const port = process.env.PORT || 3000;
 // Server you want to monitor
 const targetServer = 'https://brochat-2cqd.onrender.com/health';
 const targetServer2 = 'https://crop-service-wkxt.onrender.com/health';
-const targetServer3 = 'https://e-tongue-call-bot.onrender.com/health';
-const targetServer4 = 'https://dss-call-bot.onrender.com/health';
+const targetServer3 = 'https://e-tongue-call-bot.onrender.com';
+const targetServer4 = 'https://dss-call-bot.onrender.com';
 
 // Function to check health of BroChat
 const checkHealth = async () => {
